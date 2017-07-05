@@ -2,6 +2,8 @@
 
 . $TEST_ROOT_DIR/run-test-common
 
+export PATH="$PATH:$(cygpath -au 'C:\local\graphviz-2.38\release\bin')"
+
 py.test --verbose --deviceid $TEST_DEVICE --is1bitsgd $TEST_1BIT_SGD
 
 if [ "$?" -eq "0" ]; then
